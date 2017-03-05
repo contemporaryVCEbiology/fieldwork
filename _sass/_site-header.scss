@@ -1,0 +1,52 @@
+.site-header {
+    background-image: url('../img/park.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    min-height: 230px;
+    position: relative;
+    .heading {
+        padding: 70px 0;
+        text-align: center;
+    }
+    .heading h1,
+    .heading .siteHeading {
+        font-size: 60/16*1em;
+        font-weight: 700;
+        margin: 1rem 0 0.5rem 0;
+        //background: rgba(130, 181, 76, 0.6);
+        //padding: 0.5em 1em;
+    }
+    .heading p {
+        max-width: 100%;
+        font-size: 1.7em;
+        font-weight: 100;
+        margin-top: 0;
+        background: rgba(130, 181, 76, 0.8);
+        position: absolute;
+        bottom: 0.5em;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+        padding: 0 5px;
+        //text-shadow: 2px 2px 0 #131B2E;
+    }
+    @media only screen and (min-width: 37.5em) {
+        .heading h1,
+        .heading .siteHeading {
+            font-size: 60/16*1em;
+        }
+    }
+    @media only screen and (min-width: 64em) {
+        .heading h1,
+        .heading .siteHeading {
+            font-size: 60/16*1em;
+        }
+    }
+}
