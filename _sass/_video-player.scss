@@ -5,22 +5,42 @@
         margin-bottom: 0;
     }
     [role="tablist"] {
-        width: 25%;
+        position: static;
+        z-index: 1;
+        counter-reset: tabnumber;
+        width: em(40);
+        @media only screen and (min-width: em(800)) {
+            width: 25%;
+        }
         float: left;
         background: $darkgreen;
         button {
             width: 100%;
+            overflow: hidden;
             border: 0;
             background: none;
             text-align: left;
-            padding: 1em;
+            padding: 0;
+            white-space: nowrap;
+            line-height: 1;
             &[aria-selected="true"] {
                 background: $green;
             }
-            span {
+            &:before {
+                counter-increment: tabnumber;
+                content: counter(tabnumber);
+                display: inline-block;
+                text-align: center;
+                width: 100%;
+                padding: em(12) 0;
                 @media only screen and (min-width: em(800)) {
-                    display: none !important; //hide visually and audibly
+                    content: "Part " counter(tabnumber) " - ";
+                    display: inline;
                 }
+            }
+            @media only screen and (min-width: em(800)) {
+                padding: 1em;
+                white-space: normal;
             }
         }
     }
@@ -40,12 +60,16 @@
         display: flex;
     }
     [role="tablist"] {
-        flex: 1;
+        @media only screen and (min-width: em(800)) {
+            flex: 1;
+        }
         float: none;
     }
     .tabpanels {
         margin-left: 0;
-        flex: 3;
+        @media only screen and (min-width: em(800)) {
+            flex: 3;
+        }
     }
 }
 
