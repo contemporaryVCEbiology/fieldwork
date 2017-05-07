@@ -188,6 +188,7 @@
     if (setFocus) {
       tab.focus();
     };
+	
   };
 
   // Deactivate all tabs and tab panels
