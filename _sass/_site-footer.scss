@@ -1,6 +1,11 @@
 .site-footer {
+    font-family: Helvetica, Arial, serif;
     position: relative;
     color: #fff;
+    p { 
+        line-height: 1.6;
+        font-size: 1em;
+    }
     .container {
         max-width: 900px;
         margin: 0 auto;
@@ -78,4 +83,5 @@
 }
 .cc a {
     color: #fff;
+    text-decoration: none;
 }
